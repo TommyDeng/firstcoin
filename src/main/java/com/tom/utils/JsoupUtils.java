@@ -1,7 +1,5 @@
 package com.tom.utils;
 
-import java.io.IOException;
-
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -16,6 +14,8 @@ import org.jsoup.select.Elements;
 public class JsoupUtils {
 	public static void findAnswerer(String[] args) throws Exception {
 		String url = "http://stackoverflow.com/questions/2835505";
+		// String url = "http://www.henzan.com/live?from=plugin_toolbar";
+		// String url = "https://www.amazon.cn/dp/B01MR5B9G2/";
 		Document document = Jsoup.connect(url).get();
 
 		String question = document.select("#question .post-text").text();
@@ -26,14 +26,5 @@ public class JsoupUtils {
 			System.out.println("Answerer: " + answerer.text());
 		}
 	}
-	
-	public static void main(String[] args) throws IOException {
-		String url = "http://www.henzan.com/live?from=plugin_toolbar";
-		
-//		String url = "https://www.amazon.cn/dp/B01MR5B9G2/";
-		Document document = Jsoup.connect(url).get();
-		String targetTxt = document.html();
-		
-		System.out.println("获取结果:\n" + targetTxt);
-	}
+
 }

@@ -1,4 +1,4 @@
-package com.tom.firstcoin.config;
+package com.tom.aspirated.common;
 
 import java.nio.charset.Charset;
 

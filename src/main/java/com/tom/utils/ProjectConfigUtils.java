@@ -2,15 +2,12 @@ package com.tom.utils;
 
 import java.util.Properties;
 
-import lombok.extern.slf4j.Slf4j;
-
 /**
  * 
  * @author TommyDeng <250575979@qq.com>
  * @version 创建时间：2016年9月13日 下午4:25:46
  *
  */
-@Slf4j
 public class ProjectConfigUtils {
 
 	private static Properties projectProperties = new Properties();

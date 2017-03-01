@@ -1,9 +1,11 @@
-package com.tom.firstcoin.config;
+package com.tom.aspirated.config;
 
 import javax.servlet.Filter;
 
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+
+import com.tom.aspirated.common.DefaultSetting;
 
 /**
  * @author TommyDeng <250575979@qq.com>
