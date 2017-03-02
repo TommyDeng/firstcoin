@@ -1,4 +1,4 @@
-package com.tom.aspirated.config;
+package com.tom.firstcoin.config;
 
 import java.util.List;
 
@@ -32,7 +32,7 @@ import org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring4.view.ThymeleafViewResolver;
 import org.thymeleaf.templatemode.TemplateMode;
 
-import com.tom.aspirated.common.DefaultSetting;
+import com.tom.firstcoin.common.DefaultSetting;
 
 /**
  * @author TommyDeng <250575979@qq.com>
@@ -141,11 +141,11 @@ public class AppConfig extends WebMvcConfigurationSupport {
 		return new NamedParameterJdbcTemplate(getDataSource());
 	}
 
-	@Bean
-	public DataSourceTransactionManager transactionManager() {
-		DataSourceTransactionManager dataSourceTransactionManager = new DataSourceTransactionManager(getDataSource());
-		return dataSourceTransactionManager;
-	}
+//	@Bean
+//	public DataSourceTransactionManager transactionManager() {
+//		DataSourceTransactionManager dataSourceTransactionManager = new DataSourceTransactionManager(getDataSource());
+//		return dataSourceTransactionManager;
+//	}
 
 	@Bean
 	MultipartResolver multipartResolver() {

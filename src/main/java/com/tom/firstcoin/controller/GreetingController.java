@@ -1,15 +1,25 @@
-package com.tom.aspirated.controller;
+package com.tom.firstcoin.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.http.client.fluent.Content;
+import org.apache.http.client.fluent.Request;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mobile.device.Device;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.tom.aspirated.service.CommonService;
+import com.tom.firstcoin.common.DefaultSetting;
+import com.tom.firstcoin.common.bo.OreJsonHenzan;
+import com.tom.firstcoin.service.CommonService;
+import com.tom.utils.JsonParseUtils;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -46,7 +56,14 @@ public class GreetingController extends BaseController {
 
 		map.put("host", name);
 		log.info("Visitor<" + name + ">" + "IP<" + ipAddress + ">" + "Device<" + deviceType + ">.");
-		return "/index";
+		
+		Content content = Request.Get("http://www.henzan.com/api/pricelive_list").execute().returnContent();
+		String contentStr = content.asString(DefaultSetting.CHARSET);
+		OreJsonHenzan result = JsonParseUtils.generateJavaBean(contentStr, OreJsonHenzan.class);
+
+		map.put("result", result);
+		
+		return "/main";
 	}
 
 	/*
@@ -72,7 +89,14 @@ public class GreetingController extends BaseController {
 	 */
 	@RequestMapping("/test")
 	public String test(ModelMap map) throws Exception {
-		// map.put("host", name);
+
+		Content content = Request.Get("http://www.henzan.com/api/pricelive_list").execute().returnContent();
+		String contentStr = content.asString(DefaultSetting.CHARSET);
+		OreJsonHenzan result = JsonParseUtils.generateJavaBean(contentStr, OreJsonHenzan.class);
+
+		map.put("result", result);
+
 		return "/test";
+
 	}
 }

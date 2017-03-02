@@ -1,4 +1,4 @@
-package com.tom.aspirated.service;
+package com.tom.firstcoin.service;
 
 import java.net.URI;
 import java.util.Calendar;
@@ -16,7 +16,7 @@ import org.apache.http.entity.StringEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.tom.aspirated.common.DefaultSetting;
+import com.tom.firstcoin.common.DefaultSetting;
 
 /**
  * @author TommyDeng <250575979@qq.com>

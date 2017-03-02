@@ -1,9 +1,9 @@
-package com.tom.aspirated.controller;
+package com.tom.firstcoin.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.tom.aspirated.service.CommonService;
+import com.tom.firstcoin.service.CommonService;
 
 /**
  * @author TommyDeng <250575979@qq.com>

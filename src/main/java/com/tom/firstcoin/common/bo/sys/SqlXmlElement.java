@@ -1,4 +1,4 @@
-package com.tom.aspirated.common.bo.sys;
+package com.tom.firstcoin.common.bo.sys;
 
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlValue;

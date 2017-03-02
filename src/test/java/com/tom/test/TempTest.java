@@ -2,10 +2,12 @@ package com.tom.test;
 
 import org.apache.http.client.fluent.Content;
 import org.apache.http.client.fluent.Request;
-import org.junit.Ignore;
 import org.junit.Test;
 
-import com.tom.aspirated.common.DefaultSetting;
+import com.tom.firstcoin.common.DefaultSetting;
+import com.tom.firstcoin.common.bo.OreJsonHenzan;
+import com.tom.firstcoin.common.bo.OreJsonHenzanElement;
+import com.tom.utils.JsonParseUtils;
 
 import junit.framework.TestSuite;
 
@@ -15,14 +17,23 @@ import junit.framework.TestSuite;
  *
  */
 
-@Ignore
+// @Ignore
 public class TempTest extends TestSuite {
 
 	@Test
 	public void temp() throws Exception {
-		Content content = Request.Get("http://easybuy.jd.com/address/getProvinces.action").execute().returnContent();
+		Content content = Request.Get("http://www.henzan.com/api/pricelive_list").execute().returnContent();
 		String contentStr = content.asString(DefaultSetting.CHARSET);
-		System.err.println(contentStr);
+		OreJsonHenzan resultJson = JsonParseUtils.generateJavaBean(contentStr, OreJsonHenzan.class);
+
+		System.out.println(resultJson.getCurrent_time());
+		
+
+		for (OreJsonHenzanElement element : resultJson.getPricelive_list()) {
+			System.out.println(element.getProd_name());
+			System.out.println(element.getProd_price());
+		}
+
 	}
 
 }

@@ -1,4 +1,4 @@
-package com.tom.aspirated.common.job;
+package com.tom.firstcoin.common.job;
 
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;

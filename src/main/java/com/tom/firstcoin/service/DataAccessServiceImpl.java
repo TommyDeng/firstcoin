@@ -1,4 +1,4 @@
-package com.tom.aspirated.service;
+package com.tom.firstcoin.service;
 
 import java.lang.reflect.Method;
 import java.sql.ResultSet;
@@ -14,7 +14,7 @@ import org.springframework.jdbc.core.namedparam.NamedParameterUtils;
 import org.springframework.jdbc.core.namedparam.ParsedSql;
 import org.springframework.stereotype.Service;
 
-import com.tom.aspirated.sqlstatements.SqlStatements;
+import com.tom.firstcoin.sqlstatements.SqlStatements;
 import com.tom.utils.SqlUtils;
 
 /**

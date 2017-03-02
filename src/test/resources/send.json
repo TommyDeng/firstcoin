@@ -1,9 +1,759 @@
 {
-	"filter": {
-		"is_to_all": true
-	},
-	"text": {
-		"content": "请注意文明用语,谢谢!"
-	},
-	"msgtype": "text"
+    "current_time": 1488427200,
+    "pricelive_list": [
+        {
+            "id": "150279474",
+            "seq_id": "13607535",
+            "prod_id": "-6820277190837807716",
+            "prod_url": "http%3A%2F%2Fitem.jd.com%2F335162.html%3Futm_source%3Dkong%26utm_medium%3Dzssc%26utm_campaign%3Dt_1000023385_505%26utm_term%3D102c85ba-6822-4344-92df-c6b8dae1c608-p_1999-pr_114-at_505%26jd_pop%3D102c85ba-6822-4344-92df-c6b8dae1c608%26abt%3D0",
+            "prod_name": "SUPER MILD 惠润 柔净洗发露 600ml*2瓶+替换装400ml*2袋 ",
+            "prod_pic": "http://img12.360buyimg.com/n1/jfs/t2806/121/2395521974/98927/843f5a23/576528b3N306211c9.jpg",
+            "shop_id": "3",
+            "merchant_name": "京东",
+            "screen_shot": "http://img.miaomiaoz.com/img/show/687ef6231d4f950b4e044a0dae4fec4f",
+            "famous_brand": "2564",
+            "famous_brand_name": "资生堂",
+            "goods_id": "0",
+            "discounted_price": "62.0000",
+            "prod_price_txt": "100元包邮（199-100）",
+            "description": "清洁秀发，滋润头皮，凑单好价~SUPER MILD惠润柔净洗发露，富含有机草木精华，在清洁秀发的同时，还能有效从发芯内部赋予秀发丝丝顺滑，呵护秀发和滋润头皮，有效防止毛鳞片和蛋白质的流失，使秀发恢复健康光泽。洗后还有一种淡淡的清香，配合护发素使用，效果更佳。京东目前售价62元，下单2瓶，凑单售价38元的惠润 柔净 洗发露 替换装400ml 2袋，享受满199-100优惠，下单实付100元包邮，持平之前推荐好价，有喜欢的赞友可以关注下~",
+            "update_time": "2017-03-02 11:50:21",
+            "tag_id1": "0",
+            "tag_id2": "139",
+            "tag_id21": "122",
+            "pv": "8102",
+            "batch_no": "1488427011",
+            "prod_price_status": "3",
+            "score": "5863.0000",
+            "prod_price": "62",
+            "channel_name": "",
+            "incoming": "0",
+            "prod_cache": {
+                "sample_time": 1487144866,
+                "log_sample_time": 1488427078,
+                "update_time": 1488426621,
+                "already_rise": [],
+                "still_selling": [
+                    [
+                        "62",
+                        "62",
+                        "1",
+                        "1488427078",
+                        "北京"
+                    ],
+                    [
+                        "62",
+                        "62",
+                        "1",
+                        "1488424538",
+                        "上海"
+                    ],
+                    [
+                        "62",
+                        "62",
+                        "1",
+                        "1488426407",
+                        "江苏"
+                    ],
+                    [
+                        "62",
+                        "62",
+                        "1",
+                        "1488423118",
+                        "浙江"
+                    ],
+                    [
+                        "62",
+                        "62",
+                        "1",
+                        "1488423894",
+                        "河南"
+                    ],
+                    [
+                        "62",
+                        "62",
+                        "1",
+                        "1488427042",
+                        "山东"
+                    ]
+                ],
+                "already_sold": [],
+                "all_prod": [
+                    [
+                        "62",
+                        "62",
+                        "1",
+                        "1488427078",
+                        "北京"
+                    ],
+                    [
+                        "62",
+                        "62",
+                        "1",
+                        "1488426407",
+                        "江苏"
+                    ],
+                    [
+                        "62",
+                        "62",
+                        "1",
+                        "1488424538",
+                        "上海"
+                    ],
+                    [
+                        "62",
+                        "62",
+                        "1",
+                        "1488427042",
+                        "山东"
+                    ],
+                    [
+                        "62",
+                        "62",
+                        "1",
+                        "1488423118",
+                        "浙江"
+                    ],
+                    [
+                        "62",
+                        "62",
+                        "1",
+                        "1488423894",
+                        "河南"
+                    ]
+                ]
+            },
+            "areaStr": ""
+        },
+        {
+            "id": "150279476",
+            "seq_id": "13607860",
+            "prod_id": "-5506563354976846216",
+            "prod_url": "http%3A%2F%2Fitem.jd.com%2F172541.html",
+            "prod_name": "博朗（BRAUN）欧乐B S15.523.2 声波式电动牙刷",
+            "prod_pic": "http://img11.360buyimg.com/n1/jfs/t2092/353/1187117498/116161/18d12f0b/5649773bN8844b1e3.jpg",
+            "shop_id": "3",
+            "merchant_name": "京东",
+            "screen_shot": "",
+            "famous_brand": "126",
+            "famous_brand_name": "博朗",
+            "goods_id": "0",
+            "discounted_price": "449.0000",
+            "prod_price_txt": "449元包邮（499-50）",
+            "description": "Oral B/欧乐B是一个专注牙齿护理产品的品牌，由2005年收购了吉列公司的宝洁公司生产，它声称是“全球最多牙医选用的品牌”。这款属于其3D系列产品，是其最纤长的声波电动牙刷，握感舒适，便于携带。<br>目前报价499元，本身价格一般，可参加\"满300元减50元\"活动，满减后下单立减50元。折合低价，降价比较少见，性价比可谓相当高，喜欢的朋友可以考虑考虑啦。",
+            "update_time": "2017-03-02 11:54:15",
+            "tag_id1": "0",
+            "tag_id2": "139",
+            "tag_id21": "122",
+            "pv": "3099",
+            "batch_no": "1488427011",
+            "prod_price_status": "3",
+            "score": "5862.0000",
+            "prod_price": "499",
+            "channel_name": "",
+            "incoming": "0",
+            "prod_cache": {
+                "sample_time": 1486614710,
+                "log_sample_time": 1488426854,
+                "update_time": 1488426855,
+                "already_rise": [],
+                "still_selling": [
+                    [
+                        "499",
+                        "449",
+                        "1",
+                        "1488426854",
+                        "北京"
+                    ],
+                    [
+                        "499",
+                        "449",
+                        "1",
+                        "1488424561",
+                        "上海"
+                    ]
+                ],
+                "already_sold": [],
+                "all_prod": [
+                    [
+                        "499",
+                        "449",
+                        "1",
+                        "1488424561",
+                        "上海"
+                    ],
+                    [
+                        "499",
+                        "449",
+                        "1",
+                        "1488426854",
+                        "北京"
+                    ]
+                ]
+            },
+            "areaStr": ""
+        },
+        {
+            "id": "150279475",
+            "seq_id": "13607856",
+            "prod_id": "-399367187055519398",
+            "prod_url": "http%3A%2F%2Fitem.jd.com%2F2963955.html",
+            "prod_name": "品胜 苹果双面USB数据充电尼龙线 1.5米 香槟金 苹果手机5/5s/6/6s/Plus/7/7Plus iPad4/5 Air Pro mini2/3/4",
+            "prod_pic": "http://img10.360buyimg.com/n1/s450x450_jfs/t2734/315/3093774583/77004/753c25b/577e1cc1N9a8883c8.jpg",
+            "shop_id": "3",
+            "merchant_name": "京东",
+            "screen_shot": "",
+            "famous_brand": "2297",
+            "famous_brand_name": "品胜",
+            "goods_id": "0",
+            "discounted_price": "26.9000",
+            "prod_price_txt": "26.9元",
+            "description": "低至26.9元，再到好价，之前多是31.9元，品胜的牌子毋须多言，京东售卖也有保证，这个价位还是可以入手的。",
+            "update_time": "2017-03-02 11:54:12",
+            "tag_id1": "0",
+            "tag_id2": "115",
+            "tag_id21": "119",
+            "pv": "4494",
+            "batch_no": "1488427011",
+            "prod_price_status": "3",
+            "score": "5861.0000",
+            "prod_price": "26.9",
+            "channel_name": "",
+            "incoming": "0",
+            "prod_cache": {
+                "sample_time": 1481593015,
+                "log_sample_time": 1488426852,
+                "update_time": 1488426852,
+                "already_rise": [
+                    [
+                        "31.9",
+                        "31.9",
+                        "1",
+                        "1488424831",
+                        "北京"
+                    ],
+                    [
+                        "31.9",
+                        "31.9",
+                        "1",
+                        "1488424964",
+                        "安徽"
+                    ]
+                ],
+                "still_selling": [
+                    [
+                        "26.9",
+                        "26.9",
+                        "1",
+                        "1488426852",
+                        "上海"
+                    ],
+                    [
+                        "26.9",
+                        "26.9",
+                        "1",
+                        "1488426773",
+                        "河南"
+                    ]
+                ],
+                "already_sold": [],
+                "all_prod": [
+                    [
+                        "31.9",
+                        "31.9",
+                        "1",
+                        "1488424831",
+                        "北京"
+                    ],
+                    [
+                        "26.9",
+                        "26.9",
+                        "1",
+                        "1488426852",
+                        "上海"
+                    ],
+                    [
+                        "31.9",
+                        "31.9",
+                        "1",
+                        "1488424964",
+                        "安徽"
+                    ],
+                    [
+                        "26.9",
+                        "26.9",
+                        "1",
+                        "1488426773",
+                        "河南"
+                    ]
+                ]
+            },
+            "areaStr": "11:54更新：上海、河南有货～"
+        },
+        {
+            "id": "150279477",
+            "seq_id": "13607555",
+            "prod_id": "-5318778418610718988",
+            "prod_url": "http%3A%2F%2Fproduct.suning.com%2F0070088060%2F128243376.html",
+            "prod_name": "挪威小鱼Nordic Naturals 婴幼儿鳕鱼鱼油婴儿DHA滴剂 60毫升 美国",
+            "prod_pic": "http://image1.suning.cn/uimg/b2c/newcatentries/0070088060-000000000128243376_2_800x800.jpg?ver=2004",
+            "shop_id": "17532",
+            "merchant_name": "苏宁",
+            "screen_shot": "http://img.miaomiaoz.com/img/show/fd05a484bf9cab25b8f3354d59b70d26",
+            "famous_brand": "0",
+            "famous_brand_name": "",
+            "goods_id": "0",
+            "discounted_price": "79.0000",
+            "prod_price_txt": "79元",
+            "description": "这款NORDIC NATURALS婴儿专用鱼油DHA，为液体产品，成分是由100%的北极鳕鱼制成,采用滴管设计，方便儿童食用,比较易于吞服，对宝宝大脑、神经系统的健康发育都有很好的帮助，增强免疫力，还可防止视力下降，保护眼睛。鳕鱼成分中还含有维生素D3，可促进宝宝钙吸收，其不含重金属等违规成分，可让宝宝放心食用。该产品专为一岁下儿童设计的，可根据宝宝的体重选取用量。<br>特价到79元，刷新历史新低，平时多是82元左右，白菜价了，感兴趣的可以下手。",
+            "update_time": "2017-03-02 11:50:37",
+            "tag_id1": "0",
+            "tag_id2": "0",
+            "tag_id21": "0",
+            "pv": "3",
+            "batch_no": "1488427011",
+            "prod_price_status": "2",
+            "score": "5860.0000",
+            "prod_price": "79",
+            "channel_name": "",
+            "incoming": "0",
+            "prod_cache": {
+                "sample_time": 0,
+                "log_sample_time": 1488426637,
+                "update_time": 1488426637,
+                "already_rise": [],
+                "still_selling": [
+                    [
+                        "79",
+                        "79",
+                        "1",
+                        "1488426637",
+                        "江苏"
+                    ]
+                ],
+                "already_sold": [],
+                "all_prod": [
+                    [
+                        "79",
+                        "79",
+                        "1",
+                        "1488426637",
+                        "江苏"
+                    ]
+                ]
+            },
+            "areaStr": ""
+        },
+        {
+            "id": "150279479",
+            "seq_id": "13607828",
+            "prod_id": "5612868931265299080",
+            "prod_url": "http%3A%2F%2Fitem.jd.com%2F1276429.html",
+            "prod_name": "【京东超市】欧莱雅（LOREAL）透明质酸水润润发乳200ml（无硅油）（新老包装随机发货）",
+            "prod_pic": "http://img14.360buyimg.com/n1/jfs/t2767/217/913530066/168747/1913d73d/572aae05Ndf0fc35a.jpg",
+            "shop_id": "3",
+            "merchant_name": "京东",
+            "screen_shot": "http://img.miaomiaoz.com/img/show/854a421cbe7b16de41fe0bff51a2097b",
+            "famous_brand": "0",
+            "famous_brand_name": "",
+            "goods_id": "0",
+            "discounted_price": "9.9000",
+            "prod_price_txt": "9.9元",
+            "description": "油性发根需要劲爽效果，发丝拒绝干涩枯燥。巴黎欧莱雅透明质酸水润润发乳，一款采用透明质酸-S的润发乳，发根深透清爽，发丝水润直达发梢。欧莱雅透明质酸水润润发乳，专为油性发根干性发丝设计，革新科技，富含透明质酸-S双效成分，深透洁净发根，去除多余油脂，调节水油平衡；密集注入水动力，发丝显现水润亮泽。无硅油配方给秀发带来纯净水润。<br>9.9元好价再次来袭，限购2，属于历史最低，之前多在21元左右，相当于买二免一，太划算了，有需求的赞友们可以了解下～",
+            "update_time": "2017-03-02 11:53:47",
+            "tag_id1": "0",
+            "tag_id2": "0",
+            "tag_id21": "0",
+            "pv": "262",
+            "batch_no": "1488427011",
+            "prod_price_status": "1",
+            "score": "5859.0000",
+            "prod_price": "9.9",
+            "channel_name": "",
+            "incoming": "0",
+            "prod_cache": {
+                "sample_time": 1486052514,
+                "log_sample_time": 1488426843,
+                "update_time": 1488426827,
+                "already_rise": [],
+                "still_selling": [
+                    [
+                        "9.9",
+                        "9.9",
+                        "1",
+                        "1488426843",
+                        "北京"
+                    ]
+                ],
+                "already_sold": [],
+                "all_prod": [
+                    [
+                        "9.9",
+                        "9.9",
+                        "1",
+                        "1488426843",
+                        "北京"
+                    ]
+                ]
+            },
+            "areaStr": ""
+        },
+        {
+            "id": "150279478",
+            "seq_id": "13607904",
+            "prod_id": "-2407674199286771430",
+            "prod_url": "http%3A%2F%2Fitem.jd.com%2F2369889.html",
+            "prod_name": "丹尼尔惠灵顿（DanielWellington）手表DW女表26mm银色边尼龙带超薄女士石英手表0926DW（DW00100073）",
+            "prod_pic": "http://img14.360buyimg.com/n1/jfs/t2101/306/1454460357/145003/9b472376/56b07c64N04cecfc6.jpg",
+            "shop_id": "3",
+            "merchant_name": "京东",
+            "screen_shot": "http://img.miaomiaoz.com/img/show/dd1acb3b29ea5734c5eac2056582ecf4",
+            "famous_brand": "381",
+            "famous_brand_name": "Daniel Wellington",
+            "goods_id": "0",
+            "discounted_price": "839.0000",
+            "prod_price_txt": "839元包邮（939-100）",
+            "description": "Daniel Wellington女士腕表，货号0926DW，采用银色表圈搭配同色简洁指针，点缀施华洛世奇水晶时标，白色表盘搭配彩色条纹帆布带，相当带感，时尚气息十足。日本石英机芯，表盘26mm，防水30米。<br>目前939元，本身不减价，领取199-100券(可能仅限于新用户)，最后不到839元。折合近期好价，相比初上市888的价格来说是非常不错的入手好价，这个牌子口碑还算不错，虽然不是历史低价也是好价。",
+            "update_time": "2017-03-02 11:55:03",
+            "tag_id1": "0",
+            "tag_id2": "160",
+            "tag_id21": "112",
+            "pv": "3",
+            "batch_no": "1488427011",
+            "prod_price_status": "3",
+            "score": "5858.0000",
+            "prod_price": "939",
+            "channel_name": "",
+            "incoming": "0",
+            "prod_cache": {
+                "sample_time": 0,
+                "log_sample_time": 1488426903,
+                "update_time": 1488426903,
+                "already_rise": [],
+                "still_selling": [
+                    [
+                        "939",
+                        "839",
+                        "1",
+                        "1488426903",
+                        "北京"
+                    ]
+                ],
+                "already_sold": [],
+                "all_prod": [
+                    [
+                        "939",
+                        "839",
+                        "1",
+                        "1488426903",
+                        "北京"
+                    ]
+                ]
+            },
+            "areaStr": ""
+        },
+        {
+            "id": "150279481",
+            "seq_id": "13607434",
+            "prod_id": "5342037041397379528",
+            "prod_url": "http%3A%2F%2Fproduct.suning.com%2F0000000000%2F109271578.html",
+            "prod_name": "苏泊尔蒸滋味蒸煮多用锅 SZ22S1",
+            "prod_pic": "http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000109271578_2_800x800.jpg?ver=2001",
+            "shop_id": "17532",
+            "merchant_name": "苏宁",
+            "screen_shot": "http://img.miaomiaoz.com/img/show/2e018e36431ecf4a867ef8bce342bd39",
+            "famous_brand": "0",
+            "famous_brand_name": "苏泊尔",
+            "goods_id": "0",
+            "discounted_price": "154.0000",
+            "prod_price_txt": "154元包邮（179-25）",
+            "description": "这款锅电磁炉、煤气灶都可用，蒸煮煲炖都可；优质不锈钢锅体，持久坚固耐用。滤水式蒸屉，沥水方便；取出蒸屉可以用来煲汤。不锈钢镶嵌玻璃高拱盖，容量大，可视烹饪；加高锅身设计，容量更大。<br>目前179元，大家可参加99-15促销活动，领取0-10券之后，最终不到154元。属于历史新低，初上架是179元，不错，刚需可以入手。",
+            "update_time": "2017-03-02 11:49:00",
+            "tag_id1": "0",
+            "tag_id2": "139",
+            "tag_id21": "140",
+            "pv": "600",
+            "batch_no": "1488427011",
+            "prod_price_status": "2",
+            "score": "5857.0000",
+            "prod_price": "179",
+            "channel_name": "",
+            "incoming": "0",
+            "prod_cache": {
+                "sample_time": 1486266656,
+                "log_sample_time": 1488426540,
+                "update_time": 1488426540,
+                "already_rise": [],
+                "still_selling": [
+                    [
+                        "179",
+                        "154",
+                        "1",
+                        "1488424296",
+                        "北京"
+                    ],
+                    [
+                        "179",
+                        "154",
+                        "1",
+                        "1488426540",
+                        "山东"
+                    ]
+                ],
+                "already_sold": [],
+                "all_prod": [
+                    [
+                        "179",
+                        "154",
+                        "1",
+                        "1488424296",
+                        "北京"
+                    ],
+                    [
+                        "179",
+                        "154",
+                        "1",
+                        "1488426540",
+                        "山东"
+                    ]
+                ]
+            },
+            "areaStr": ""
+        },
+        {
+            "id": "150279482",
+            "seq_id": "13606571",
+            "prod_id": "-3452553573876520586",
+            "prod_url": "http%3A%2F%2Fwww.amazon.cn%2Fgp%2Fproduct%2FB01M0Q6KUM%2F",
+            "prod_name": "Apple iPhone 7 Plus 32G 黑色 移动联通电信4G手机",
+            "prod_pic": "https://images-cn.ssl-images-amazon.com/images/I/51Y96qw5YjL.jpg",
+            "shop_id": "4",
+            "merchant_name": "亚马逊",
+            "screen_shot": "http://img.miaomiaoz.com/img/show/21cf33dd0d23177031212c58ef7fa126",
+            "famous_brand": "69",
+            "famous_brand_name": "苹果",
+            "goods_id": "9317",
+            "discounted_price": "5799.0000",
+            "prod_price_txt": "5799元包邮",
+            "description": "直降好价5799元，低于之前推荐，这个牌子口碑还算不错，种草已久的赞友可以入手啦～",
+            "update_time": "2017-03-02 11:38:32",
+            "tag_id1": "0",
+            "tag_id2": "115",
+            "tag_id21": "119",
+            "pv": "17539",
+            "batch_no": "1488427011",
+            "prod_price_status": "2",
+            "score": "5856.0000",
+            "prod_price": "5799",
+            "channel_name": "",
+            "incoming": "0",
+            "prod_cache": {
+                "sample_time": 1487827848,
+                "log_sample_time": 1488427068,
+                "update_time": 1488425912,
+                "already_rise": [
+                    [
+                        "6598",
+                        "6598",
+                        "1",
+                        "1488427068",
+                        "北京"
+                    ],
+                    [
+                        "6598",
+                        "6598",
+                        "1",
+                        "1488427005",
+                        "广东"
+                    ],
+                    [
+                        "6598",
+                        "6598",
+                        "1",
+                        "1488422500",
+                        "四川"
+                    ],
+                    [
+                        "6598",
+                        "6598",
+                        "1",
+                        "1488424233",
+                        "广西"
+                    ]
+                ],
+                "still_selling": [
+                    [
+                        "5799",
+                        "5799",
+                        "1",
+                        "1488425912",
+                        "山东"
+                    ]
+                ],
+                "already_sold": [],
+                "all_prod": [
+                    [
+                        "6598",
+                        "6598",
+                        "1",
+                        "1488427005",
+                        "广东"
+                    ],
+                    [
+                        "6598",
+                        "6598",
+                        "1",
+                        "1488424233",
+                        "广西"
+                    ],
+                    [
+                        "6598",
+                        "6598",
+                        "1",
+                        "1488422500",
+                        "四川"
+                    ],
+                    [
+                        "6598",
+                        "6598",
+                        "1",
+                        "1488427068",
+                        "北京"
+                    ],
+                    [
+                        "5799",
+                        "5799",
+                        "1",
+                        "1488425912",
+                        "山东"
+                    ]
+                ]
+            },
+            "areaStr": "11:57更新：山东有货～",
+            "article_count": 11
+        },
+        {
+            "id": "150279483",
+            "seq_id": "13606942",
+            "prod_id": "3458710936099319605",
+            "prod_url": "http%3A%2F%2Fitem.jd.com%2F2908785.html",
+            "prod_name": "惠普（HP）27ES 27英寸纤薄 IPS FHD 178度广视角 色彩增强 LED背光液晶显示器（黑色）",
+            "prod_pic": "http://img10.360buyimg.com/n1/s450x450_jfs/t3691/56/1891298907/427110/491bcb2f/58340811N56d4cd3c.jpg",
+            "shop_id": "3",
+            "merchant_name": "京东",
+            "screen_shot": "",
+            "famous_brand": "44",
+            "famous_brand_name": "惠普",
+            "goods_id": "0",
+            "discounted_price": "1299.0000",
+            "prod_price_txt": "1299元包邮",
+            "description": "HP 惠普 27ES 27英寸IPS LED背光液晶显示器，而且厚度薄至6.3mm，不占地方的同时搭配贴合镂空的底座设计，颜值逼格满满。由于采用的是可视角度更广的IPS屏，它能够从不同视角都能呈现出众的画质效果。它的接口配置比较丰富，高清接口和普通接口都有配备。<br>降至1299元，单买好价，比平时价格降了100元，喜欢的朋友可以考虑考虑啦。",
+            "update_time": "2017-03-02 11:43:16",
+            "tag_id1": "0",
+            "tag_id2": "115",
+            "tag_id21": "117",
+            "pv": "8465",
+            "batch_no": "1488427011",
+            "prod_price_status": "3",
+            "score": "5855.0000",
+            "prod_price": "1299",
+            "channel_name": "",
+            "incoming": "0",
+            "prod_cache": {
+                "sample_time": 1487637536,
+                "log_sample_time": 1488426656,
+                "update_time": 1488426196,
+                "already_rise": [],
+                "still_selling": [
+                    [
+                        "1299",
+                        "1299",
+                        "1",
+                        "1488426196",
+                        "北京"
+                    ]
+                ],
+                "already_sold": [
+                    [
+                        "1299",
+                        "1299",
+                        "0",
+                        "1488426656",
+                        "广东"
+                    ]
+                ],
+                "all_prod": [
+                    [
+                        "1299",
+                        "1299",
+                        "1",
+                        "1488426196",
+                        "北京"
+                    ],
+                    [
+                        "1299",
+                        "1299",
+                        "0",
+                        "1488426656",
+                        "广东"
+                    ]
+                ]
+            },
+            "areaStr": "11:50更新：北京有货～"
+        },
+        {
+            "id": "150279484",
+            "seq_id": "13606622",
+            "prod_id": "7851193531805634982",
+            "prod_url": "http%3A%2F%2Fitem.jd.com%2F1257229.html",
+            "prod_name": "【京东超市】拜杰（Baijie）电动压水器自动吸水器抽水机桶装水压水器 HV-18黑",
+            "prod_pic": "http://img14.360buyimg.com/n1/jfs/t559/140/393594248/40169/76132939/54630eb2N18687be5.jpg",
+            "shop_id": "3",
+            "merchant_name": "京东",
+            "screen_shot": "http://img.miaomiaoz.com/img/show/e135bf6a542f4a46ec55c1f22b0bd299",
+            "famous_brand": "0",
+            "famous_brand_name": "",
+            "goods_id": "0",
+            "discounted_price": "69.0000",
+            "prod_price_txt": "69元",
+            "description": "很多朋友受限于居住环境不方便安装净水器，而滤水壶过滤也要煮沸（杀菌）才适合直接饮用，而对于靠谱品牌桶装水更多朋友担心的是饮水机内部难于清洁的问题，桶装水压水器就很好的解决了这一问题，相比之前推荐过的手动压水器，此款电动压水器一键式操作更加便捷易用。导水管为食品级硅胶材质，外壳ABS塑料。<br>降至69元，仅限购10件，实属好价，平时多是79元左右，喜欢的朋友可以凑单带回。",
+            "update_time": "2017-03-02 11:38:59",
+            "tag_id1": "0",
+            "tag_id2": "139",
+            "tag_id21": "140",
+            "pv": "1457",
+            "batch_no": "1488427011",
+            "prod_price_status": "3",
+            "score": "5854.0000",
+            "prod_price": "69",
+            "channel_name": "",
+            "incoming": "0",
+            "prod_cache": {
+                "sample_time": 1487301001,
+                "log_sample_time": 1488425939,
+                "update_time": 1488425939,
+                "already_rise": [],
+                "still_selling": [
+                    [
+                        "69",
+                        "69",
+                        "1",
+                        "1488425939",
+                        "广西"
+                    ]
+                ],
+                "already_sold": [],
+                "all_prod": [
+                    [
+                        "69",
+                        "69",
+                        "1",
+                        "1488425939",
+                        "广西"
+                    ]
+                ]
+            },
+            "areaStr": ""
+        }
+    ]
 }

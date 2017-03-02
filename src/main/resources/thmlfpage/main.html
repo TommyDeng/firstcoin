@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/base :: html_head(~{::title},~{::link},~{::script})">
+<title>近期好价</title>
+</head>
+<body>
+	<div th:each="product : ${result.pricelive_list} ">
+		<div class="card">
+			<div class="card-header text-right"
+				th:text="${product.merchant_name}">Featured</div>
+			<img class="card-img-top img-thumbnail" th:src="${product.prod_pic}"
+				alt="Card image cap">
+			<div class="card-block">
+				<h4 class="card-title">
+					<span th:text="${product.prod_name}"></span><br /> <span
+						class="tag tag-danger" th:text="${product.prod_price_txt}">Donec
+						ullamcorper nulla non metus auctor fringilla.</span>
+				</h4>
+
+				<p class="card-text" th:utext="${product.description}">Some
+					quick example text to build on the card title and make up the bulk
+					of the card's content.</p>
+				<a target="_blank" th:href="${#uris.unescapePath(product.prod_url)}"
+					class="btn btn-primary">去看看</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

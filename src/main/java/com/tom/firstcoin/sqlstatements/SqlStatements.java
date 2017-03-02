@@ -1,4 +1,4 @@
-package com.tom.aspirated.sqlstatements;
+package com.tom.firstcoin.sqlstatements;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -10,8 +10,8 @@ import java.util.Map;
 
 import org.apache.commons.io.IOUtils;
 
-import com.tom.aspirated.common.bo.sys.SqlXml;
-import com.tom.aspirated.common.bo.sys.SqlXmlElement;
+import com.tom.firstcoin.common.bo.sys.SqlXml;
+import com.tom.firstcoin.common.bo.sys.SqlXmlElement;
 import com.tom.utils.XMLParseUtils;
 
 import lombok.extern.slf4j.Slf4j;
