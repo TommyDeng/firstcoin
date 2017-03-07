@@ -27,25 +27,50 @@ public class TempTest extends TestSuite {
 	public void temp() throws Exception {
 		OreDescriptionHenzan oreDescriptionHenzan = new OreDescriptionHenzan();
 
-		Calendar targetCalendar = Calendar.getInstance();
-
-		targetCalendar.set(2015, 4, 7);
-
-		System.out.println(targetCalendar.getTimeInMillis());
-		
-		oreDescriptionHenzan.setBn(String.valueOf(targetCalendar.getTimeInMillis()));
 		Content content = Request.Get(oreDescriptionHenzan.buildURI()).execute().returnContent();
 		String contentStr = content.asString(DefaultSetting.CHARSET);
 		OreJsonHenzan resultJson = JsonParseUtils.generateJavaBean(contentStr, OreJsonHenzan.class);
-
+		System.out.println(oreDescriptionHenzan.buildURI().toString());
 		System.out.println(resultJson.getCurrent_time());
 
+		
+		String latestId = "";
+		
+		System.out.println("===================================================");
 		for (OreJsonHenzanElement element : resultJson.getPricelive_list()) {
 			System.out.println(element.getProd_name());
-			System.out.println(element.getProd_price());
-			System.out.println(element.getUpdate_time());
+//			System.out.println(element.getProd_price());
+//			System.out.println(element.getUpdate_time());
+			latestId = element.getId();
 		}
 
+		oreDescriptionHenzan.setOffset(latestId);
+		content = Request.Get(oreDescriptionHenzan.buildURI()).execute().returnContent();
+		contentStr = content.asString(DefaultSetting.CHARSET);
+		resultJson = JsonParseUtils.generateJavaBean(contentStr, OreJsonHenzan.class);
+
+		
+		System.out.println("===================================================");
+		for (OreJsonHenzanElement element : resultJson.getPricelive_list()) {
+			System.out.println(element.getProd_name());
+//			System.out.println(element.getProd_price());
+//			System.out.println(element.getUpdate_time());
+			latestId = element.getId();
+		}
+
+		oreDescriptionHenzan.setOffset(latestId);
+		content = Request.Get(oreDescriptionHenzan.buildURI()).execute().returnContent();
+		contentStr = content.asString(DefaultSetting.CHARSET);
+		resultJson = JsonParseUtils.generateJavaBean(contentStr, OreJsonHenzan.class);
+
+		
+		System.out.println("===================================================");
+		for (OreJsonHenzanElement element : resultJson.getPricelive_list()) {
+			System.out.println(element.getProd_name());
+//			System.out.println(element.getProd_price());
+//			System.out.println(element.getUpdate_time());
+			latestId = element.getId();
+		}
 	}
 
 }

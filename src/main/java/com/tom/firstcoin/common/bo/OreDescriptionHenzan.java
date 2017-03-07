@@ -23,11 +23,14 @@ public class OreDescriptionHenzan implements Serializable {
 	public final static String ORE_URL = "http://www.henzan.com/api/pricelive_list";
 
 	/**
-	 * 起始偏移量
+	 * 起始物品ID 输入0或者不输入则表示从最新商品开始的
 	 */
 	String offset = "0";
-	// 取数范围
-	String limit = "20";
+
+	/**
+	 * 获取记录条数 默认：10 目前不起作用
+	 */
+	String limit = "10";
 
 	// UNKNOWN
 	String mid = "0";
@@ -38,11 +41,13 @@ public class OreDescriptionHenzan implements Serializable {
 	// UNKNOWN
 	String cid = "0";
 
-	// 时间戳
-	String bn = String.valueOf(System.currentTimeMillis());
+	/**
+	 * 猜测是时间参数，目前不起作用
+	 */
+	String bn = "";
 
 	/**
-	 * 生产最终的uri
+	 * 生成最终的uri
 	 * 
 	 * @return
 	 * @throws Exception
@@ -50,14 +55,13 @@ public class OreDescriptionHenzan implements Serializable {
 	public URI buildURI() throws Exception {
 		URIBuilder uriBuilder = new URIBuilder(ORE_URL);
 		uriBuilder.setCharset(DefaultSetting.CHARSET);
-		
+
 		// build by order
 		uriBuilder.addParameter("offset", offset);
 		uriBuilder.addParameter("limit", limit);
 		uriBuilder.addParameter("mid", mid);
 		uriBuilder.addParameter("pid", pid);
 		uriBuilder.addParameter("cid", cid);
-		uriBuilder.addParameter("bn", bn);
 
 		return uriBuilder.build();
 	}

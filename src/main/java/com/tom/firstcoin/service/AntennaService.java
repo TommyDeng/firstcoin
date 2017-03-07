@@ -12,4 +12,7 @@ public interface AntennaService {
 	 * @throws Exception 
 	 */
 	void executeHenzan() throws Exception;
+	
+	
+	
 }

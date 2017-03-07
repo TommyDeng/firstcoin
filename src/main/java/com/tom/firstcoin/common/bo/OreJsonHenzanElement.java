@@ -39,4 +39,5 @@ public class OreJsonHenzanElement implements Serializable {
 	public String prod_price;
 	public String channel_name;
 	public String incoming;
+
 }

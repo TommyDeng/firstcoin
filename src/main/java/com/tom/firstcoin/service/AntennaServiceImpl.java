@@ -26,12 +26,15 @@ public class AntennaServiceImpl implements AntennaService {
 		OreDescriptionHenzan oreDescriptionHenzan = new OreDescriptionHenzan();
 
 		// fetch
-		Content content = Request.Get(oreDescriptionHenzan.buildURI()).execute().returnContent();
-		String contentStr = content.asString(DefaultSetting.CHARSET);
-		OreJsonHenzan result = JsonParseUtils.generateJavaBean(contentStr, OreJsonHenzan.class);
+		OreJsonHenzan result = digOre(oreDescriptionHenzan);
 
 		// restore
+	}
 
+	private OreJsonHenzan digOre(OreDescriptionHenzan oreDescriptionHenzan) throws Exception {
+		Content content = Request.Get(oreDescriptionHenzan.buildURI()).execute().returnContent();
+		String contentStr = content.asString(DefaultSetting.CHARSET);
+		return JsonParseUtils.generateJavaBean(contentStr, OreJsonHenzan.class);
 	}
 
 }
