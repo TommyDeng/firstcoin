@@ -1,9 +1,8 @@
 package com.tom.test;
 
-import java.util.Calendar;
-
 import org.apache.http.client.fluent.Content;
 import org.apache.http.client.fluent.Request;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import com.tom.firstcoin.common.DefaultSetting;
@@ -20,7 +19,7 @@ import junit.framework.TestSuite;
  *
  */
 
-// @Ignore
+@Ignore
 public class TempTest extends TestSuite {
 
 	@Test
@@ -33,14 +32,13 @@ public class TempTest extends TestSuite {
 		System.out.println(oreDescriptionHenzan.buildURI().toString());
 		System.out.println(resultJson.getCurrent_time());
 
-		
 		String latestId = "";
-		
+
 		System.out.println("===================================================");
 		for (OreJsonHenzanElement element : resultJson.getPricelive_list()) {
 			System.out.println(element.getProd_name());
-//			System.out.println(element.getProd_price());
-//			System.out.println(element.getUpdate_time());
+			// System.out.println(element.getProd_price());
+			// System.out.println(element.getUpdate_time());
 			latestId = element.getId();
 		}
 
@@ -49,12 +47,11 @@ public class TempTest extends TestSuite {
 		contentStr = content.asString(DefaultSetting.CHARSET);
 		resultJson = JsonParseUtils.generateJavaBean(contentStr, OreJsonHenzan.class);
 
-		
 		System.out.println("===================================================");
 		for (OreJsonHenzanElement element : resultJson.getPricelive_list()) {
 			System.out.println(element.getProd_name());
-//			System.out.println(element.getProd_price());
-//			System.out.println(element.getUpdate_time());
+			// System.out.println(element.getProd_price());
+			// System.out.println(element.getUpdate_time());
 			latestId = element.getId();
 		}
 
@@ -63,12 +60,11 @@ public class TempTest extends TestSuite {
 		contentStr = content.asString(DefaultSetting.CHARSET);
 		resultJson = JsonParseUtils.generateJavaBean(contentStr, OreJsonHenzan.class);
 
-		
 		System.out.println("===================================================");
 		for (OreJsonHenzanElement element : resultJson.getPricelive_list()) {
 			System.out.println(element.getProd_name());
-//			System.out.println(element.getProd_price());
-//			System.out.println(element.getUpdate_time());
+			// System.out.println(element.getProd_price());
+			// System.out.println(element.getUpdate_time());
 			latestId = element.getId();
 		}
 	}

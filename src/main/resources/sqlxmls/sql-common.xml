@@ -54,4 +54,10 @@ values
    :BATCH_NO)
 	]]>
 	</sql>
+
+	<sql name="BUSS003">
+	<![CDATA[
+select * from FC_RECOMMENDATION t order by update_time desc limit :LIMIT offset :OFFSET
+	]]>
+	</sql>
 </sqls>

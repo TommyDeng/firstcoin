@@ -1,24 +1,23 @@
 package com.tom.firstcoin.controller;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.http.client.fluent.Content;
 import org.apache.http.client.fluent.Request;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mobile.device.Device;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.tom.firstcoin.common.DefaultSetting;
 import com.tom.firstcoin.common.bo.OreJsonHenzan;
 import com.tom.firstcoin.service.CommonService;
+import com.tom.firstcoin.service.DataAccessService;
 import com.tom.utils.JsonParseUtils;
 
 import lombok.extern.slf4j.Slf4j;
@@ -36,10 +35,11 @@ public class GreetingController extends BaseController {
 	@Autowired
 	CommonService commonService;
 
+	@Autowired
+	DataAccessService dataAccessService;
+
 	@RequestMapping("/")
-	public String index(ModelMap map,
-			@RequestParam(name = "name", required = false, defaultValue = "anonymous") String name, Device device,
-			HttpServletRequest request) throws Exception {
+	public String index(ModelMap map, Device device, HttpServletRequest request) throws Exception {
 		String ipAddress = request.getHeader("X-Real-IP");
 		if (ipAddress == null) {
 			ipAddress = request.getRemoteAddr();
@@ -54,15 +54,14 @@ public class GreetingController extends BaseController {
 			deviceType = "tablet";
 		}
 
-		map.put("host", name);
-		log.info("Visitor<" + name + ">" + "IP<" + ipAddress + ">" + "Device<" + deviceType + ">.");
-		
-		Content content = Request.Get("http://www.henzan.com/api/pricelive_list").execute().returnContent();
-		String contentStr = content.asString(DefaultSetting.CHARSET);
-		OreJsonHenzan result = JsonParseUtils.generateJavaBean(contentStr, OreJsonHenzan.class);
+		commonService.logVisit(ipAddress, deviceType);
 
-		map.put("result", result);
-		
+		Map<String, Object> paramMap = new HashMap<>();
+		paramMap.put("LIMIT", 50);// 每页数
+		paramMap.put("OFFSET", 0);// 偏移
+		List<Map<String, Object>> resultList = dataAccessService.queryMapList("BUSS003", paramMap);
+
+		map.put("resultList", resultList);
 		return "/main";
 	}
 
