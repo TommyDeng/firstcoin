@@ -6,5 +6,52 @@
 select 1 from dual
 	]]>
 	</sql>
-	
+
+
+	<sql name="BUSS001">
+	<![CDATA[
+SELECT count(1) FROM FC_RECOMMENDATION t where t.ITEM_ID = :ITEM_ID and t.ORE_ID = :ORE_ID   
+	]]>
+	</sql>
+
+	<sql name="BUSS002">
+	<![CDATA[
+insert into FC_RECOMMENDATION
+  (ITEM_ID,
+   ORE_ID,
+   UNIQUE_CODE,
+   PROD_ID,
+   PROD_URL,
+   PROD_NAME,
+   PROD_PIC,
+   MERCHANT_ID,
+   MERCHANT_NAME,
+   BRAND_ID,
+   BRAND_NAME,
+   PRICE,
+   PRICE_TXT,
+   PRICE_STATUS,
+   DESCRIPTION,
+   UPDATE_TIME,
+   BATCH_NO)
+values
+  (:ITEM_ID,
+   :ORE_ID,
+   :UNIQUE_CODE,
+   :PROD_ID,
+   :PROD_URL,
+   :PROD_NAME,
+   :PROD_PIC,
+   :MERCHANT_ID,
+   :MERCHANT_NAME,
+   :BRAND_ID,
+   :BRAND_NAME,
+   :PRICE,
+   :PRICE_TXT,
+   :PRICE_STATUS,
+   :DESCRIPTION,
+   :UPDATE_TIME,
+   :BATCH_NO)
+	]]>
+	</sql>
 </sqls>

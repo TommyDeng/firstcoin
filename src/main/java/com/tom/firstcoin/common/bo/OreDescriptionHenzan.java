@@ -21,6 +21,8 @@ public class OreDescriptionHenzan implements Serializable {
 	private static final long serialVersionUID = 2012592443455621898L;
 
 	public final static String ORE_URL = "http://www.henzan.com/api/pricelive_list";
+	
+	public final static String ORE_ID = "1";
 
 	/**
 	 * 起始物品ID 输入0或者不输入则表示从最新商品开始的
@@ -30,7 +32,7 @@ public class OreDescriptionHenzan implements Serializable {
 	/**
 	 * 获取记录条数 默认：10 目前不起作用
 	 */
-	String limit = "10";
+	Integer limit = 10;
 
 	// UNKNOWN
 	String mid = "0";
@@ -58,7 +60,7 @@ public class OreDescriptionHenzan implements Serializable {
 
 		// build by order
 		uriBuilder.addParameter("offset", offset);
-		uriBuilder.addParameter("limit", limit);
+		uriBuilder.addParameter("limit", String.valueOf(limit));
 		uriBuilder.addParameter("mid", mid);
 		uriBuilder.addParameter("pid", pid);
 		uriBuilder.addParameter("cid", cid);
