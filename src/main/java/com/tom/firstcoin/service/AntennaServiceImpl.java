@@ -16,7 +16,7 @@ import com.tom.firstcoin.common.bo.OreJsonHenzan;
 import com.tom.firstcoin.common.bo.OreJsonHenzanElement;
 import com.tom.utils.JsonParseUtils;
 
-import lombok.extern.java.Log;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * @author TommyDeng <250575979@qq.com>
@@ -24,7 +24,7 @@ import lombok.extern.java.Log;
  *
  */
 
-@Log
+@Slf4j
 @Service
 public class AntennaServiceImpl implements AntennaService {
 
@@ -73,7 +73,9 @@ public class AntennaServiceImpl implements AntennaService {
 	 * @return
 	 */
 	private boolean restoreBatch(OreJsonHenzan result) {
+		int insertedRow = 0;
 		if (result == null || result.getPricelive_list().size() == 0) {
+			log.info("Empty list. restore exit." + insertedRow + "/0");
 			return true;
 		}
 
@@ -85,7 +87,8 @@ public class AntennaServiceImpl implements AntennaService {
 			long count = dataAccessService.queryForOneObject("BUSS001", paramMap, Long.class);
 
 			if (count > 0) {
-				log.info("Item id conflict <" + element.id + ">@<" + OreDescriptionHenzan.ORE_ID + ">. restore exit.");
+				log.info("Item id conflict <" + element.id + ">@<" + OreDescriptionHenzan.ORE_ID + ">. restore exit."
+						+ insertedRow + "/10");
 				return true;
 			}
 			paramMap.put("UNIQUE_CODE", UUID.randomUUID());
@@ -105,6 +108,7 @@ public class AntennaServiceImpl implements AntennaService {
 			paramMap.put("BATCH_NO", element.getBatch_no());
 
 			dataAccessService.update("BUSS002", paramMap);
+			insertedRow++;
 		}
 		return false;
 	}
@@ -113,11 +117,17 @@ public class AntennaServiceImpl implements AntennaService {
 		URI uri = oreDescriptionHenzan.buildURI();
 
 		Content content = null;
-		try {
-			log.info(uri.toString());
-			content = Request.Get(uri).execute().returnContent();
-		} catch (Exception e) {
-			// TODO: handle exception
+		int maxRetry = 3;
+		int i = 1;
+		while (i <= maxRetry) {
+			try {
+				log.info(uri.toString());
+				content = Request.Get(uri).execute().returnContent();
+				break;
+			} catch (Exception e) {
+				log.error(e.getMessage());
+				i++;
+			}
 		}
 		String contentStr = content.asString(DefaultSetting.CHARSET);
 		return JsonParseUtils.generateJavaBean(contentStr, OreJsonHenzan.class);
