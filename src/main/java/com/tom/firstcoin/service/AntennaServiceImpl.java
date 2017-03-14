@@ -68,6 +68,26 @@ public class AntennaServiceImpl implements AntennaService {
 
 	}
 
+	private OreJsonHenzan digOre(OreDescriptionHenzan oreDescriptionHenzan) throws Exception {
+		URI uri = oreDescriptionHenzan.buildURI();
+
+		Content content = null;
+		int maxRetry = 3;
+		int i = 1;
+		while (i <= maxRetry) {
+			try {
+				log.info(uri.toString());
+				content = Request.Get(uri).execute().returnContent();
+				break;
+			} catch (Exception e) {
+				log.error(e.getMessage());
+				i++;
+			}
+		}
+		String contentStr = content.asString(DefaultSetting.CHARSET);
+		return JsonParseUtils.generateJavaBean(contentStr, OreJsonHenzan.class);
+	}
+
 	/**
 	 * @param result
 	 * @return
@@ -113,25 +133,4 @@ public class AntennaServiceImpl implements AntennaService {
 		return false;
 	}
 
-	private OreJsonHenzan digOre(OreDescriptionHenzan oreDescriptionHenzan) throws Exception {
-		URI uri = oreDescriptionHenzan.buildURI();
-
-		Content content = null;
-		int maxRetry = 3;
-		int i = 1;
-		while (i <= maxRetry) {
-			try {
-				log.info(uri.toString());
-				content = Request.Get(uri).execute().returnContent();
-				break;
-			} catch (Exception e) {
-				log.error(e.getMessage());
-				i++;
-			}
-		}
-		String contentStr = content.asString(DefaultSetting.CHARSET);
-		return JsonParseUtils.generateJavaBean(contentStr, OreJsonHenzan.class);
-	}
-
-	
 }

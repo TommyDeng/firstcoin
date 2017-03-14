@@ -11,7 +11,7 @@ public class HealthyPulse {
 
 	@Scheduled(initialDelay = 2 * 1000, fixedRate = 20 * 60 * 1000)
 	public void printPulse() {
-		log.info("Server Pulse.");
+		log.info("---^--v--^--v--^---Server Pulse---^--v--^--v--^---");
 	}
 
 }
