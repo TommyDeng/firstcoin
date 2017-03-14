@@ -133,4 +133,14 @@ public class AntennaServiceImpl implements AntennaService {
 		return false;
 	}
 
+	@Override
+	public void backupHistory() {
+		//一个月之前的数据备份
+		//1.insert into backup
+		dataAccessService.update("BUSS004", null);
+		
+		//2.delete
+		dataAccessService.update("BUSS005", null);
+	}
+
 }

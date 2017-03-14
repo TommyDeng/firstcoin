@@ -26,4 +26,17 @@ public class AntennaJob {
 
 		log.info("Antenna Job end.");
 	}
+
+	@Scheduled(initialDelay = 60 * 1000, fixedRate = 5 * 24 * 60 * 60 * 1000)
+	public void historyBackup() {
+		log.info("History Backup Job start.");
+
+		try {
+			antennaService.backupHistory();
+		} catch (Exception e) {
+			log.error(e.getMessage());
+		}
+
+		log.info("History Backup Job end.");
+	}
 }

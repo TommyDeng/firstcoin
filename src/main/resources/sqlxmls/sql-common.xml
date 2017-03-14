@@ -60,4 +60,16 @@ values
 select * from FC_RECOMMENDATION t order by update_time desc limit :LIMIT offset :OFFSET
 	]]>
 	</sql>
+	
+	<sql name="BUSS004">
+	<![CDATA[
+insert into FC_RECOMMENDATION_HISTORY select * from FC_RECOMMENDATION t where t.update_time <= sysdate - 30
+	]]>
+	
+	</sql>
+	<sql name="BUSS005">
+	<![CDATA[
+delete from FC_RECOMMENDATION t where t.update_time <= sysdate - 30
+	]]>
+	</sql>
 </sqls>

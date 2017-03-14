@@ -9,10 +9,13 @@ package com.tom.firstcoin.service;
 public interface AntennaService {
 	/**
 	 * 抓取和处理henzan数据
-	 * @throws Exception 
+	 * 
+	 * @throws Exception
 	 */
 	void executeHenzan() throws Exception;
-	
-	
-	
+
+	/**
+	 * 备份三个月前的数据
+	 */
+	void backupHistory();
 }
