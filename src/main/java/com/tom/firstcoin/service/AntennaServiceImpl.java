@@ -60,7 +60,7 @@ public class AntennaServiceImpl implements AntennaService {
 
 				// 拿到最后一个id作为下一个批次的offset
 				String offset = result.pricelive_list.get(oreDescriptionHenzan.getLimit() - 1).id;
-				oreDescriptionHenzan.setOffset(offset);
+				oreDescriptionHenzan.setId(offset);
 			}
 		} finally {
 			isRunning = false;
@@ -135,11 +135,11 @@ public class AntennaServiceImpl implements AntennaService {
 
 	@Override
 	public void backupHistory() {
-		//一个月之前的数据备份
-		//1.insert into backup
+		// 一个月之前的数据备份
+		// 1.insert into backup
 		dataAccessService.update("BUSS004", null);
-		
-		//2.delete
+
+		// 2.delete
 		dataAccessService.update("BUSS005", null);
 	}
 

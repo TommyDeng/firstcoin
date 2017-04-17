@@ -42,7 +42,7 @@ public class TempTest extends TestSuite {
 			latestId = element.getId();
 		}
 
-		oreDescriptionHenzan.setOffset(latestId);
+		oreDescriptionHenzan.setId(latestId);
 		content = Request.Get(oreDescriptionHenzan.buildURI()).execute().returnContent();
 		contentStr = content.asString(DefaultSetting.CHARSET);
 		resultJson = JsonParseUtils.generateJavaBean(contentStr, OreJsonHenzan.class);
@@ -55,7 +55,7 @@ public class TempTest extends TestSuite {
 			latestId = element.getId();
 		}
 
-		oreDescriptionHenzan.setOffset(latestId);
+		oreDescriptionHenzan.setId(latestId);
 		content = Request.Get(oreDescriptionHenzan.buildURI()).execute().returnContent();
 		contentStr = content.asString(DefaultSetting.CHARSET);
 		resultJson = JsonParseUtils.generateJavaBean(contentStr, OreJsonHenzan.class);
