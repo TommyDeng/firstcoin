@@ -89,11 +89,6 @@ public class GreetingController extends BaseController {
 	@RequestMapping("/test")
 	public String test(ModelMap map) throws Exception {
 
-		Content content = Request.Get("http://www.henzan.com/api/pricelive_list").execute().returnContent();
-		String contentStr = content.asString(DefaultSetting.CHARSET);
-		OreJsonHenzan result = JsonParseUtils.generateJavaBean(contentStr, OreJsonHenzan.class);
-
-		map.put("result", result);
 
 		return "/test";
 
