@@ -14,7 +14,7 @@ public class AntennaJob {
 	@Autowired
 	AntennaService antennaService;
 
-//	@Scheduled(initialDelay = 2 * 1000, fixedRate = 5 * 60 * 1000)
+	@Scheduled(initialDelay = 2 * 1000, fixedRate = 5 * 60 * 1000)
 	public void antenna() {
 		log.info("Antenna Job start.");
 

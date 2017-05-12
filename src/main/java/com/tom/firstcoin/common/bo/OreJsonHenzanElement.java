@@ -1,7 +1,6 @@
 package com.tom.firstcoin.common.bo;
 
 import java.io.Serializable;
-import java.util.List;
 
 import lombok.Data;
 

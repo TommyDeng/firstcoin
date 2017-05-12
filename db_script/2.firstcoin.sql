@@ -1,50 +1,63 @@
---条目主表
-drop table if exists fc_recommendation;
-create table fc_recommendation(
-    item_id bigint not null, --条目ID主键
-    ore_id tinyint not null, --oreID
-    unique_code uuid not null, --记录唯一标示
-    prod_id varchar(50), 
-    prod_url varchar(1000),
-    prod_name varchar(500),
-    prod_pic varchar(1000),
-    merchant_id varchar(10),
-    merchant_name varchar(50),
-    brand_id varchar(10),
-    brand_name varchar(50),
-    price decimal(20, 2),
-    price_txt varchar(100),
-    price_status varchar(10),
-    description varchar(5000),
-    update_time timestamp,
-    batch_no varchar(50),
-    create_time timestamp default sysdate
-);
---联合主键(ore id和条目id)
-alter table fc_recommendation add primary key (item_id, ore_id);
+--创建数据库实例
+CREATE DATABASE firstcoin;
+
+--日志表：用户登录记录
+DROP TABLE IF EXISTS LOG_VISIT;
+CREATE TABLE LOG_VISIT(
+    ID serial PRIMARY KEY,
+    NAME VARCHAR,
+    REMARK VARCHAR,
+    CREATE_TIME TIMESTAMP DEFAULT now()
+); 
 
 
 --条目主表
-drop table if exists fc_recommendation_history;
-create table fc_recommendation_history(
-    item_id bigint not null, --条目ID主键
-    ore_id tinyint not null, --oreID
+drop table if exists recommendation;
+create table recommendation(
+    item_id varchar not null, --条目ID主键
+    ore_id varchar not null, --oreID
     unique_code uuid not null, --记录唯一标示
-    prod_id varchar(50), 
-    prod_url varchar(1000),
-    prod_name varchar(500),
-    prod_pic varchar(1000),
-    merchant_id varchar(10),
-    merchant_name varchar(50),
-    brand_id varchar(10),
-    brand_name varchar(50),
-    price decimal(20, 2),
-    price_txt varchar(100),
-    price_status varchar(10),
-    description varchar(5000),
-    update_time timestamp,
-    batch_no varchar(50),
-    create_time timestamp default sysdate
+    prod_id varchar, 
+    prod_url varchar,
+    prod_name varchar,
+    prod_pic varchar,
+    merchant_id varchar,
+    merchant_name varchar,
+    brand_id varchar,
+    brand_name varchar,
+    price varchar, --decimal(20, 2),
+    price_txt varchar,
+    price_status varchar,
+    description varchar,
+    update_time varchar,--timestamp,
+    batch_no varchar,
+    create_time timestamp default now()
 );
 --联合主键(ore id和条目id)
-alter table fc_recommendation_history add primary key (item_id, ore_id);
+alter table recommendation add primary key (item_id, ore_id);
+
+
+--条目主表
+drop table if exists recommendation_history;
+create table recommendation_history(
+    item_id varchar not null, --条目ID主键
+    ore_id varchar not null, --oreID
+    unique_code uuid not null, --记录唯一标示
+    prod_id varchar, 
+    prod_url varchar,
+    prod_name varchar,
+    prod_pic varchar,
+    merchant_id varchar,
+    merchant_name varchar,
+    brand_id varchar,
+    brand_name varchar,
+    price decimal(20, 2),
+    price_txt varchar,
+    price_status varchar,
+    description varchar,
+    update_time timestamp,
+    batch_no varchar,
+    create_time timestamp default now()
+);
+--联合主键(ore id和条目id)
+alter table recommendation_history add primary key (item_id, ore_id);

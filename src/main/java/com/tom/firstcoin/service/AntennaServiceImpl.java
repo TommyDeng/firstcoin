@@ -104,7 +104,7 @@ public class AntennaServiceImpl implements AntennaService {
 
 			paramMap.put("ITEM_ID", element.id);
 			paramMap.put("ORE_ID", OreDescriptionHenzan.ORE_ID);
-			long count = dataAccessService.queryForOneObject("BUSS001", paramMap, Long.class);
+			Long count = dataAccessService.queryForObject("BUSS001", paramMap, Long.class);
 
 			if (count > 0) {
 				log.info("Item id conflict <" + element.id + ">@<" + OreDescriptionHenzan.ORE_ID + ">. restore exit."

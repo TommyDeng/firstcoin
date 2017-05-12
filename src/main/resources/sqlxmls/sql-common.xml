@@ -10,13 +10,13 @@ select 1 from dual
 
 	<sql name="BUSS001">
 	<![CDATA[
-SELECT count(1) FROM FC_RECOMMENDATION t where t.ITEM_ID = :ITEM_ID and t.ORE_ID = :ORE_ID   
+SELECT count(1) FROM RECOMMENDATION t where t.ITEM_ID = :ITEM_ID and t.ORE_ID = :ORE_ID   
 	]]>
 	</sql>
 
 	<sql name="BUSS002">
 	<![CDATA[
-insert into FC_RECOMMENDATION
+insert into RECOMMENDATION
   (ITEM_ID,
    ORE_ID,
    UNIQUE_CODE,
@@ -57,19 +57,19 @@ values
 
 	<sql name="BUSS003">
 	<![CDATA[
-select * from FC_RECOMMENDATION t order by update_time desc limit :LIMIT offset :OFFSET
+select * from RECOMMENDATION t order by update_time desc limit :LIMIT offset :OFFSET
 	]]>
 	</sql>
 	
 	<sql name="BUSS004">
 	<![CDATA[
-insert into FC_RECOMMENDATION_HISTORY select * from FC_RECOMMENDATION t where t.update_time <= sysdate - 30
+insert into RECOMMENDATION_HISTORY select * from RECOMMENDATION t where t.update_time <= sysdate - 30
 	]]>
 	
 	</sql>
 	<sql name="BUSS005">
 	<![CDATA[
-delete from FC_RECOMMENDATION t where t.update_time <= sysdate - 30
+delete from RECOMMENDATION t where t.update_time <= sysdate - 30
 	]]>
 	</sql>
 </sqls>
