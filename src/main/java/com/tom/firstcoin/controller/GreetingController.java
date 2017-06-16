@@ -6,19 +6,15 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.apache.http.client.fluent.Content;
-import org.apache.http.client.fluent.Request;
+import org.apache.commons.lang3.time.StopWatch;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mobile.device.Device;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.tom.firstcoin.common.DefaultSetting;
-import com.tom.firstcoin.common.bo.OreJsonHenzan;
 import com.tom.firstcoin.service.CommonService;
 import com.tom.firstcoin.service.DataAccessService;
-import com.tom.utils.JsonParseUtils;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -40,6 +36,10 @@ public class GreetingController extends BaseController {
 
 	@RequestMapping("/")
 	public String index(ModelMap map, Device device, HttpServletRequest request) throws Exception {
+		
+		StopWatch stopwatch = new StopWatch();
+		stopwatch.start();
+		
 		String ipAddress = request.getHeader("X-Real-IP");
 		if (ipAddress == null) {
 			ipAddress = request.getRemoteAddr();
@@ -56,12 +56,19 @@ public class GreetingController extends BaseController {
 
 		commonService.logVisit(ipAddress, deviceType);
 
+		
+		log.info("log visit used: "+stopwatch.getTime()+" ms.");
+		stopwatch.suspend();
+		
 		Map<String, Object> paramMap = new HashMap<>();
-		paramMap.put("LIMIT", 50);// 每页数
+		paramMap.put("LIMIT", 20);// 每页数
 		paramMap.put("OFFSET", 0);// 偏移
 		List<Map<String, Object>> resultList = dataAccessService.queryMapList("BUSS003", paramMap);
 
+		log.info("query data used: "+stopwatch.getTime()+" ms.");
+		
 		map.put("resultList", resultList);
+		
 		return "/main";
 	}
 
