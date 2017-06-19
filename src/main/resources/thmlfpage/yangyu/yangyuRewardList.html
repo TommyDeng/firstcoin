@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/base :: html_head(~{::title},~{::link},~{::script})">
+<title></title>
+</head>
+<body>
+	<div class="container">
+		<table class="table table-sm">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>订单编号</th>
+					<th>商品名称</th>
+					<th>用户ID</th>
+					<th>今日返现</th>
+					<th>余额</th>
+					<th>剩余天数</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!--/*/ <th:block th:each="reward : ${rewards}"> /*/-->
+				<tr>
+					<th scope="row" th:text="${rewardStat.count}">0</th>
+					<td th:text="${reward.order_code}"></td>
+					<td th:text="${reward.prod_name}"></td>
+					<td th:text="${reward.customer_code}"></td>
+					<td th:text="${reward.prod_total_amt}"></td>
+					<td th:text="${reward.prod_total_amt}"></td>
+					<td th:text="${reward.return_days}"></td>
+					<td><i class="fa fa-pencil-square-o" aria-hidden="true"></i></td>
+				</tr>
+				<!--/*/ </th:block> /*/-->
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

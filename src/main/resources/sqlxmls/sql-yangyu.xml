@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<sqls>
+
+	<sql name="YY001">
+	<![CDATA[
+select * from yangyu_rewards 
+	]]>
+	</sql>
+
+</sqls>
