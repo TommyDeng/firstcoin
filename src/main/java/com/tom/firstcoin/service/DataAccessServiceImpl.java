@@ -54,6 +54,16 @@ public class DataAccessServiceImpl implements DataAccessService {
 		return namedParameterJdbcTemplate.update(sql, setParamMap);
 	}
 
+	@Override
+	public int deleteSingle(String tableName, Map<String, Object> whereParamMap) {
+		tableName = tableName.toUpperCase();
+		whereParamMap = SqlUtils.revertKeyUpcase(whereParamMap);
+		
+		String sql = getDeleteSqlByTableNameAndParamMap(tableName, whereParamMap);
+
+		return namedParameterJdbcTemplate.update(sql, whereParamMap);
+	}
+	
 	/**
 	 * 根据表名生成全字段insert语句
 	 * 
@@ -111,11 +121,37 @@ public class DataAccessServiceImpl implements DataAccessService {
 		}
 
 		for (Entry<String, Object> whereColumn : whereParamMap.entrySet()) {
-			whereClauseSql.append(whereColumn + "=:" + whereColumn + " and ");
+			whereClauseSql.append(whereColumn.getKey() + "=:" + whereColumn.getKey() + " and ");
 		}
 
 		// delete last ','
 		returnSql.delete(returnSql.length() - 1, returnSql.length());
+		// delete last ' and '
+		whereClauseSql.delete(whereClauseSql.length() - 5, whereClauseSql.length());
+
+		returnSql.append(" where ").append(whereClauseSql);
+		return returnSql.toString().toUpperCase();
+	}
+	
+	/**
+	 * 根据表名生成paramMap中存在的字段update语句
+	 * 
+	 * @param tableName
+	 * @param paramMap
+	 * @return
+	 * @throws Exception
+	 */
+	private String getDeleteSqlByTableNameAndParamMap(String tableName, 
+			Map<String, Object> whereParamMap) {
+		StringBuilder returnSql = new StringBuilder();
+		StringBuilder whereClauseSql = new StringBuilder();
+
+		returnSql.append("delete from " + tableName);
+
+		for (Entry<String, Object> whereColumn : whereParamMap.entrySet()) {
+			whereClauseSql.append(whereColumn.getKey() + "=:" + whereColumn.getKey() + " and ");
+		}
+
 		// delete last ' and '
 		whereClauseSql.delete(whereClauseSql.length() - 5, whereClauseSql.length());
 

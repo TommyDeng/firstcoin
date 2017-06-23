@@ -3,7 +3,38 @@
 
 	<sql name="YY001">
 	<![CDATA[
-select * from yangyu_rewards 
+select *,
+       return_days - (case
+         when (current_date - first_return_date) >= 0 then
+          current_date - first_return_date + 1
+         else
+          0
+       end) :: int as rest_days,
+       case
+         when (current_date >= first_return_date and
+              current_date < first_return_date + return_days) then
+          prod_total_amt / return_days
+         else
+          0
+       end :: numeric(10,2) as today_rewards,
+       case
+         when current_date < first_return_date then
+          prod_total_amt
+         when current_date > first_return_date + return_days then
+          0
+         else
+          prod_total_amt *
+          (return_days - (current_date - first_return_date + 1)) /
+          return_days
+       end :: numeric(10,2) as rest_amt
+  from yangyu_rewards
+
+
+	]]>
+	</sql>
+	<sql name="YY002">
+	<![CDATA[
+select * from yangyu_rewards where id = :id
 	]]>
 	</sql>
 

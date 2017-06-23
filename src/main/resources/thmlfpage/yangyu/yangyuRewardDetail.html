@@ -4,51 +4,62 @@
 <title></title>
 </head>
 <body>
-
 	<div class="container">
-		<div class="row">
-			<div class="col"><form>
+		<form class="form-horizontal" role="form" th:object="${formData}">
+			<div class="row">
+				<!-- PRODUCT -->
+				<div class="col">
+					<input type="hidden" th:field="*{properties[id]}" />
 					<div class="form-group">
-						<label for="exampleInputEmail1">Email address</label> <input
-							type="email" class="form-control" id="exampleInputEmail1"
-							aria-describedby="emailHelp" placeholder="Enter email"> <small
-							id="emailHelp" class="form-text text-muted">We'll never
-							share your email with anyone else.</small>
+						<label>商品名称 *</label> <input type="text" class="form-control"
+							th:field="*{properties[prod_name]}" required="required">
 					</div>
-				</form></div>
-			<div class="col"><form>
-					<div class="input-group">
-						<label for="exampleInputEmail1">商品名称</label> <input type="text"
-							class="form-control" id="exampleInputEmail1">
+					<div class="form-group">
+						<label>数量 *</label> <input type="number" class="form-control"
+							th:field="*{properties[prod_count]}" required="required">
 					</div>
-					<div class="input-group">
-						<label>数量</label> <input type="number" class="form-control">
+					<div class="form-group">
+						<label>成交金额 *</label> <input type="number" class="form-control"
+							th:field="*{properties[prod_total_amt]}" required="required">
 					</div>
-					<button type="submit" class="btn btn-primary">Submit</button>
-				</form></div>
-		</div>
-		<div class="row">
-			<div class="col">1 of 3</div>
-			<div class="col">1 of 3</div>
-			<div class="col">1 of 3</div>
-		</div>
-	</div>
-	<div class="container">
-		<div class="row">
-			<div class="col-sm">One of three columns</div>
-			<div class="col-sm">One of three columns</div>
-			<div class="col-sm">One of three columns</div>
-		</div>
-	</div>
-	<div class="container">
-		<div class="row">
-			<div class="col">
-				
+					<div class="form-group">
+						<label>返还天数 *</label> <input type="number" class="form-control"
+							th:field="*{properties[return_days]}" required="required">
+					</div>
+					<div class="form-group">
+						<label>订单编号</label> <input type="text" class="form-control"
+							th:field="*{properties[order_code]}">
+					</div>
+				</div>
+				<!-- CUSTOMER -->
+				<div class="col">
+					<div class="form-group">
+						<label>名字</label> <input type="text" class="form-control"
+							th:field="*{properties[customer_name]}">
+					</div>
+					<div class="form-group">
+						<label>电话</label> <input type="text" class="form-control"
+							th:field="*{properties[customer_mobile]}">
+					</div>
+					<div class="form-group">
+						<label>用户ID</label> <input type="text" class="form-control"
+							th:field="*{properties[customer_code]}">
+					</div>
+				</div>
 			</div>
-			<div class="col">
-				
+
+			<div class="clearfix">
+				<a class="btn btn-secondary float-left" role="button"
+					th:href="@{yangyuRewardList}"><span>Back</span></a>
+
+				<button type="submit" class="btn btn-primary float-right"
+					th:formaction="@{yangyuRewardSave}"
+					onclick="return formValidation();" th:formmethod="post">
+					<span>Save</span>
+				</button>
 			</div>
-		</div>
+
+		</form>
 	</div>
 </body>
 </html>

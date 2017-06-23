@@ -52,6 +52,16 @@ public interface DataAccessService {
 	int updateSingle(String tableName, Map<String, Object> setParamMap, Map<String, Object> whereParamMap);
 
 	/**
+	 * 删除记录，只更新paramMap中对应项,必须包含PK
+	 * 
+	 * @param tableName
+	 * @param paramMap
+	 * @return
+	 * @throws Exception
+	 */
+	int deleteSingle(String tableName, Map<String, Object> whereParamMap);
+	
+	/**
 	 * 执行sql
 	 * 
 	 * @param sqlName

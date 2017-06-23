@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/base :: html_head(~{::title},~{::link},~{::script})">
+<link rel="stylesheet" th:href="@{/css/signin.css}" />
+<title></title>
+</head>
+<body>
+	<div class="container">
+		<form class="form-signin" role="form" th:object="${formData}">
+			<h2 class="form-signin-heading" th:text="${loginTips}">Please
+				sign in</h2>
+			<input type="text" id="inputEmail" class="form-control"
+				placeholder="User name" required="required" autofocus="autofocus"
+				th:field="*{properties[userName]}"><input type="password"
+				id="inputPassword" class="form-control" placeholder="Password"
+				th:field="*{properties[password]}" required="required">
+			<div class="checkbox">
+				<label> <input type="checkbox" value="remember-me">
+					Remember me
+				</label>
+			</div>
+			<button class="btn btn-lg btn-primary btn-block" type="submit"
+				th:formaction="@{yangyuLogin}" th:formmethod="post">Sign in</button>
+		</form>
+
+	</div>
+</body>
+</html>

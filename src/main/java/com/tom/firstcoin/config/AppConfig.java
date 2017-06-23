@@ -14,7 +14,6 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.core.env.Environment;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
-import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.jdbc.datasource.lookup.JndiDataSourceLookup;
 import org.springframework.mobile.device.DeviceHandlerMethodArgumentResolver;
 import org.springframework.mobile.device.DeviceResolverHandlerInterceptor;
@@ -33,6 +32,7 @@ import org.thymeleaf.spring4.view.ThymeleafViewResolver;
 import org.thymeleaf.templatemode.TemplateMode;
 
 import com.tom.firstcoin.common.DefaultSetting;
+import com.tom.firstcoin.common.Interceptor.YangyuSecurityInterceptor;
 
 /**
  * @author TommyDeng <250575979@qq.com>
@@ -63,6 +63,7 @@ public class AppConfig extends WebMvcConfigurationSupport {
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
 		registry.addInterceptor(deviceResolverHandlerInterceptor());
+		registry.addInterceptor(new YangyuSecurityInterceptor()).addPathPatterns("/yangyu/*");
 	}
 
 	@Override
@@ -141,11 +142,12 @@ public class AppConfig extends WebMvcConfigurationSupport {
 		return new NamedParameterJdbcTemplate(getDataSource());
 	}
 
-//	@Bean
-//	public DataSourceTransactionManager transactionManager() {
-//		DataSourceTransactionManager dataSourceTransactionManager = new DataSourceTransactionManager(getDataSource());
-//		return dataSourceTransactionManager;
-//	}
+	// @Bean
+	// public DataSourceTransactionManager transactionManager() {
+	// DataSourceTransactionManager dataSourceTransactionManager = new
+	// DataSourceTransactionManager(getDataSource());
+	// return dataSourceTransactionManager;
+	// }
 
 	@Bean
 	MultipartResolver multipartResolver() {

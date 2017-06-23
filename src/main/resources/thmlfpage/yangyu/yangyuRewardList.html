@@ -8,7 +8,11 @@
 		<table class="table table-sm">
 			<thead>
 				<tr>
-					<th>#</th>
+					<th><a th:href="@{yangyuRewardDetail}" role="button"> <span
+							class="fa-stack"> <i class="fa fa-square-o fa-stack-2x"></i>
+								<i class="fa fa-plus fa-stack-1x"></i>
+						</span>
+					</a></th>
 					<th>订单编号</th>
 					<th>商品名称</th>
 					<th>用户ID</th>
@@ -25,10 +29,16 @@
 					<td th:text="${reward.order_code}"></td>
 					<td th:text="${reward.prod_name}"></td>
 					<td th:text="${reward.customer_code}"></td>
-					<td th:text="${reward.prod_total_amt}"></td>
-					<td th:text="${reward.prod_total_amt}"></td>
-					<td th:text="${reward.return_days}"></td>
-					<td><i class="fa fa-pencil-square-o" aria-hidden="true"></i></td>
+					<td th:text="${reward.today_rewards}"></td>
+					<td th:text="${reward.rest_amt}"></td>
+					<td th:text="${reward.rest_days}"></td>
+					<td><a th:href="@{yangyuRewardDetail(rowId=${reward.id})}">
+							<span class="fa-stack"><i
+								class="fa fa-square-o fa-stack-2x"></i><i
+								class="fa fa-pencil fa-stack-1x"></i> </span>
+					</a><a th:href="@{yangyuRewardDelete(rowId=${reward.id})}"><span
+							class="fa-stack"><i class="fa fa-square-o fa-stack-2x"></i><i
+								class="fa fa-times fa-stack-1x"></i></span></a></td>
 				</tr>
 				<!--/*/ </th:block> /*/-->
 			</tbody>
