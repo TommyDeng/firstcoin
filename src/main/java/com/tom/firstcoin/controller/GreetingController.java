@@ -96,8 +96,6 @@ public class GreetingController extends BaseController {
 	@RequestMapping("/test")
 	public String test(ModelMap map) throws Exception {
 
-
 		return "/test";
-
 	}
 }
