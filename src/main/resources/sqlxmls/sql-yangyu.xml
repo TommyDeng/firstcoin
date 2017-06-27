@@ -4,32 +4,10 @@
 	<sql name="YY001">
 	<![CDATA[
 select *,
-       return_days - (case
-         when (current_date - first_return_date) >= 0 then
-          current_date - first_return_date + 1
-         else
-          0
-       end) :: int as rest_days,
-       case
-         when (current_date >= first_return_date and
-              current_date < first_return_date + return_days) then
-          prod_total_amt / return_days
-         else
-          0
-       end :: numeric(10,2) as today_rewards,
-       case
-         when current_date < first_return_date then
-          prod_total_amt
-         when current_date > first_return_date + return_days then
-          0
-         else
-          prod_total_amt *
-          (return_days - (current_date - first_return_date + 1)) /
-          return_days
-       end :: numeric(10,2) as rest_amt
+       first_return_date as first_return_date,
+       first_return_date + return_days - 1 as last_return_date,
+       (prod_total_amt / return_days) :: numeric(10,2) as rewards_per_day
   from yangyu_rewards
-
-
 	]]>
 	</sql>
 	<sql name="YY002">
@@ -37,5 +15,27 @@ select *,
 select * from yangyu_rewards where id = :id
 	]]>
 	</sql>
+	<sql name="YY003">
+	<![CDATA[
+select *,
+       (return_days - (current_date - first_return_date)) ::int as rest_days,
+       (prod_total_amt / return_days) ::numeric(10, 2) as today_rewards,
+       (prod_total_amt * (return_days - (current_date - first_return_date)) / return_days) ::numeric(10, 2) as rest_amt
+  from yangyu_rewards
+ where (current_date >= first_return_date and
+       current_date < first_return_date + return_days)
+   and coalesce(feed_date, current_date - 1) != current_date
 
+	]]>
+	</sql>
+	<sql name="YY004">
+	<![CDATA[
+update yangyu_rewards set feed_date = current_date where id = :id
+	]]>
+	</sql>
+	<sql name="YY005">
+	<![CDATA[
+select * from yangyu_feed_record where rewards_id = :rewards_id
+	]]>
+	</sql>
 </sqls>

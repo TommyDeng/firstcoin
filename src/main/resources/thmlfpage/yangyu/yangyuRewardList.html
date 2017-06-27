@@ -5,44 +5,73 @@
 </head>
 <body>
 	<div class="container">
-		<table class="table table-sm">
-			<thead>
-				<tr>
-					<th><a th:href="@{yangyuRewardDetail}" role="button"> <span
-							class="fa-stack"> <i class="fa fa-square-o fa-stack-2x"></i>
-								<i class="fa fa-plus fa-stack-1x"></i>
-						</span>
-					</a></th>
-					<th>订单编号</th>
-					<th>商品名称</th>
-					<th>用户ID</th>
-					<th>今日返现</th>
-					<th>余额</th>
-					<th>剩余天数</th>
-					<th>操作</th>
-				</tr>
-			</thead>
-			<tbody>
-				<!--/*/ <th:block th:each="reward : ${rewards}"> /*/-->
-				<tr>
-					<th scope="row" th:text="${rewardStat.count}">0</th>
-					<td th:text="${reward.order_code}"></td>
-					<td th:text="${reward.prod_name}"></td>
-					<td th:text="${reward.customer_code}"></td>
-					<td th:text="${reward.today_rewards}"></td>
-					<td th:text="${reward.rest_amt}"></td>
-					<td th:text="${reward.rest_days}"></td>
-					<td><a th:href="@{yangyuRewardDetail(rowId=${reward.id})}">
-							<span class="fa-stack"><i
-								class="fa fa-square-o fa-stack-2x"></i><i
-								class="fa fa-pencil fa-stack-1x"></i> </span>
-					</a><a th:href="@{yangyuRewardDelete(rowId=${reward.id})}"><span
-							class="fa-stack"><i class="fa fa-square-o fa-stack-2x"></i><i
-								class="fa fa-times fa-stack-1x"></i></span></a></td>
-				</tr>
-				<!--/*/ </th:block> /*/-->
-			</tbody>
-		</table>
+		<nav class="navbar navbar-toggleable-md navbar-inverse bg-primary">
+			<button class="navbar-toggler navbar-toggler-right" type="button"
+				data-toggle="collapse" data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="navbar-brand">
+				<i class="fa fa-history" aria-hidden="true"></i>
+			</div>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="nav-pills navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link"
+						th:href="@{yangyuRewardToday}">Today</a></li>
+					<li class="nav-item mr-6"><a class="nav-link active">All</a></li>
+				</ul>
+				<form class="form-inline my-2 my-lg-0">
+					<a class="btn btn-primary my-2 my-sm-0"
+						th:href="@{../yangyuSignout}"><i class="fa fa-sign-out"
+						aria-hidden="true"></i>Sign Out</a>
+				</form>
+			</div>
+		</nav>
+
+		<div class="container">
+			<table class="table table-sm">
+				<thead>
+					<tr>
+						<th><a th:href="@{yangyuRewardDetail}" role="button"> <span
+								class="fa-stack"> <i class="fa fa-square-o fa-stack-2x"></i>
+									<i class="fa fa-plus fa-stack-1x"></i>
+							</span>
+						</a></th>
+						<th>订单编号</th>
+						<th>商品名称</th>
+						<th>用户ID</th>
+						<th>每日返现</th>
+						<th>首次返现日期</th>
+						<th>最后返现日期</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!--/*/ <th:block th:each="reward : ${rewards}"> /*/-->
+					<tr>
+						<th scope="row" th:text="${rewardStat.count}">0</th>
+						<td th:text="${reward.order_code}"></td>
+						<td th:text="${reward.prod_name}"></td>
+						<td th:text="${reward.customer_code}"></td>
+						<td th:text="${reward.rewards_per_day}"></td>
+						<td th:text="${reward.first_return_date}"></td>
+						<td th:text="${reward.last_return_date}"></td>
+						<td><a th:href="@{yangyuFeedRecordsList(rowId=${reward.id})}"><span
+								class="fa-stack"><i class="fa fa-square-o fa-stack-2x"></i><i
+									class="fa fa-bars fa-stack-1x"></i></span></a><a
+							data-toggle="confirmation"
+							th:href="@{yangyuRewardDetail(rowId=${reward.id})}"> <span
+								class="fa-stack"><i class="fa fa-square-o fa-stack-2x"></i><i
+									class="fa fa-pencil fa-stack-1x"></i> </span>
+						</a><a th:href="@{yangyuRewardDelete(rowId=${reward.id})}"><span
+								class="fa-stack"><i class="fa fa-square-o fa-stack-2x"></i><i
+									class="fa fa-times fa-stack-1x"></i></span></a></td>
+					</tr>
+					<!--/*/ </th:block> /*/-->
+				</tbody>
+			</table>
+		</div>
 	</div>
 </body>
 </html>

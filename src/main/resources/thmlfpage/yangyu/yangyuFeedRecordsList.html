@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/base :: html_head(~{::title},~{::link},~{::script})">
+<title></title>
+</head>
+<body>
+	<div class="container">
+		<div class="container">
+			<table class="table table-sm">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>操作人</th>
+						<th>操作时间</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!--/*/ <th:block th:each="reward : ${rewards}"> /*/-->
+					<tr>
+						<th scope="row" th:text="${rewardStat.count}">0</th>
+						<td th:text="${reward.creator}"></td>
+						<td th:text="${reward.create_time}"></td>
+					</tr>
+					<!--/*/ </th:block> /*/-->
+				</tbody>
+			</table>
+		</div>
+		<div class="clearfix">
+			<a class="btn btn-secondary float-left" role="button"
+				th:href="@{yangyuRewardList}"><span>Back</span></a>
+		</div>
+
+	</div>
+</body>
+</html>
