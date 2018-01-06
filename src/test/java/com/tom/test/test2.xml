@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tiripPackage version='1.0' xmlns='http://www.e12366.com/dataspec'>
+	<identity>
+		<serviceId>QQ25</serviceId>
+		<dkType>11</dkType>
+	</identity>
+	<contentControl>
+		<control>
+			<id>1</id>
+			<type>zip</type>
+			<impl>Zlib</impl>
+		</control>
+		<control>
+			<id>2</id>
+			<type>crypt</type>
+			<impl>CA</impl>
+		</control>
+		<control>
+			<id>3</id>
+			<type>code</type>
+			<impl>Base64</impl>
+		</control>
+	</contentControl>
+	<businessContent>
+		<subPackage>
+			<id>1</id>
+			<content>
+				<head>
+					<nsrsbh>91440300618902700K</nsrsbh>
+				</head>
+				<body>
+					<item>
+						<JDXZ_DM>440306006</JDXZ_DM>
+						<ZGSWJ_DM>14403064000</ZGSWJ_DM>
+						<ZCDZ>深圳市宝安区石岩街道应人石社区永新街文韬工业园E栋</ZCDZ>
+						<nsrsbh>91440300618902700K</nsrsbh>
+						<SJGSDQ>14403051300</SJGSDQ>
+						<NSRMC>力维兴电子（深圳）有限公司</NSRMC>
+						<HY_DM>3811</HY_DM>
+						<SCJYDZXZQHSZ_DM>440305</SCJYDZXZQHSZ_DM>
+						<GDGHLX_DM>1</GDGHLX_DM>
+						<DJJG_DM>14403051300</DJJG_DM>
+						<SWDJBLBZ>Y</SWDJBLBZ>
+						<SCJYDZ>深圳市宝安区石岩街道应人石社区永新街文韬工业园E栋</SCJYDZ>
+						<NSRSBH>91440300618902700K</NSRSBH>
+						<SSGLY_DM>14403063076</SSGLY_DM>
+						<DJXH>10114403000026497871</DJXH>
+						<DJZCLX_DM>230</DJZCLX_DM>
+						<GDSLX_DM>1</GDSLX_DM>
+						<ZGSWSKFJ_DM>14403064005</ZGSWSKFJ_DM>
+						<FJMQYBZ>N</FJMQYBZ>
+						<LRR_DM>14403059999</LRR_DM>
+						<XGR_DM>14403061250</XGR_DM>
+						<SSDABH>10114403000095811458</SSDABH>
+						<DJRQ>2001-08-01 00:00:00.0</DJRQ>
+						<NSRBM>14009239</NSRBM>
+						<ZZJG_DM>618902700</ZZJG_DM>
+						<KQCCSZTDJBZ>N</KQCCSZTDJBZ>
+						<SJTB_SJ>2017-03-15 11:50:00.16601</SJTB_SJ>
+						<FDDBRXM>李小华</FDDBRXM>
+						<code>00000000</code>
+						<FDDBRSFZJHM>120103196409254516</FDDBRSFZJHM>
+						<LRRQ>2001-08-01 16:52:00.0</LRRQ>
+						<msg>纳税人基础信息</msg>
+						<XGRQ>2017-03-15 11:49:57.0</XGRQ>
+						<YXBZ>Y</YXBZ>
+						<KZZTDJLX_DM>1110</KZZTDJLX_DM>
+						<NSRZT_DM>03</NSRZT_DM>
+						<serviceId>QQ25</serviceId>
+						<FDDBRSFZJLX_DM>201</FDDBRSFZJLX_DM>
+						<SHXYDM>91440300618902700K</SHXYDM>
+						<ZCDZXZQHSZ_DM>440305</ZCDZXZQHSZ_DM>
+						<DWLSGX_DM>30</DWLSGX_DM>
+					</item>
+					<item>
+						<JDXZ_DM>YF440306006</JDXZ_DM>
+						<ZGSWJ_DM>YF14403064000</ZGSWJ_DM>
+						<ZCDZ>深圳市宝安区石岩街道应人石社区永新街文韬工业园E栋</ZCDZ>
+						<nsrsbh>91440300618902700K</nsrsbh>
+						<SJGSDQ>14403051300</SJGSDQ>
+						<NSRMC>力维兴电子（深圳）有限公司</NSRMC>
+						<HY_DM>3811</HY_DM>
+						<SCJYDZXZQHSZ_DM>440305</SCJYDZXZQHSZ_DM>
+						<GDGHLX_DM>1</GDGHLX_DM>
+						<DJJG_DM>14403051300</DJJG_DM>
+						<SWDJBLBZ>Y</SWDJBLBZ>
+						<SCJYDZ>深圳市宝安区石岩街道应人石社区永新街文韬工业园E栋</SCJYDZ>
+						<NSRSBH>91440300618902700K</NSRSBH>
+						<SSGLY_DM>14403063076</SSGLY_DM>
+						<DJXH>10114403000026497871</DJXH>
+						<DJZCLX_DM>230</DJZCLX_DM>
+						<GDSLX_DM>1</GDSLX_DM>
+						<ZGSWSKFJ_DM>14403064005</ZGSWSKFJ_DM>
+						<FJMQYBZ>N</FJMQYBZ>
+						<LRR_DM>14403059999</LRR_DM>
+						<XGR_DM>14403061250</XGR_DM>
+						<SSDABH>10114403000095811458</SSDABH>
+						<DJRQ>2001-08-01 00:00:00.0</DJRQ>
+						<NSRBM>14009239</NSRBM>
+						<ZZJG_DM>618902700</ZZJG_DM>
+						<KQCCSZTDJBZ>N</KQCCSZTDJBZ>
+						<SJTB_SJ>2017-03-15 11:50:00.16601</SJTB_SJ>
+						<FDDBRXM>李小华</FDDBRXM>
+						<code>00000000</code>
+						<FDDBRSFZJHM>120103196409254516</FDDBRSFZJHM>
+						<LRRQ>2001-08-01 16:52:00.0</LRRQ>
+						<msg>纳税人基础信息</msg>
+						<XGRQ>2017-03-15 11:49:57.0</XGRQ>
+						<YXBZ>Y</YXBZ>
+						<KZZTDJLX_DM>1110</KZZTDJLX_DM>
+						<NSRZT_DM>03</NSRZT_DM>
+						<serviceId>QQ25</serviceId>
+						<FDDBRSFZJLX_DM>201</FDDBRSFZJLX_DM>
+						<SHXYDM>91440300618902700K</SHXYDM>
+						<ZCDZXZQHSZ_DM>440305</ZCDZXZQHSZ_DM>
+						<DWLSGX_DM>YF30</DWLSGX_DM>
+					</item>
+				</body>
+			</content>
+		</subPackage>
+	</businessContent>
+	<returnState>
+		<returnCode>00000000</returnCode>
+		<returnMessage>纳税人基础信息</returnMessage>
+	</returnState>
+</tiripPackage>

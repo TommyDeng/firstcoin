@@ -1,7 +1,5 @@
 package com.tom.test;
 
-import org.junit.Test;
-
 import junit.framework.TestSuite;
 
 /**
@@ -13,9 +11,5 @@ import junit.framework.TestSuite;
 // @Ignore
 public class TempTest extends TestSuite {
 
-
-	@Test
-	public void temp() throws Exception {
-	}
 
 }
