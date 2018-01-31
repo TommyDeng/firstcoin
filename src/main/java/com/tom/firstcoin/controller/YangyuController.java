@@ -71,7 +71,7 @@ public class YangyuController extends BaseController {
 		if ("admin".equals(userName) && "123456".equals(password)) {
 			session.setAttribute("loginFlag", Boolean.TRUE);
 			session.setAttribute("loginUser", userName);
-			return "redirect:/yangyu/yangyuRewardList";
+			return "redirect:/yangyu/yangyuRewardToday";
 		}
 		map.put("loginTips", "Try Again");
 		mapForm.getProperties().clear();

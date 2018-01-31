@@ -45,18 +45,7 @@ $(document).ready(function() {
 $(function() {
 	$('[data-toggle="tooltip"]').tooltip();
 	$('[data-toggle="popover"]').popover();
-//	$('[data-toggle="confirmation"]').confirmation();
 })
-
-
-//$(function() {
-////	$('[data-toggle="confirmation"]').confirmation()
-//	$('[data-toggle="confirmation"]').confirmation({
-//		rootSelector : '[data-toggle=confirmation]',
-//	// other options
-//	})
-//
-//})
 
 
 
